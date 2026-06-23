@@ -1,0 +1,157 @@
+@font-face {
+    font-family: "Inter";
+    src: url('../public/fonts/inter-variable.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nimbus Roman No9 L';
+    src: url('../public/fonts/NimbusRomNo9L-MedIta.woff2') format('woff2'),
+        url('../public/fonts/NimbusRomNo9L-MedIta.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nimbus Roman No9 L';
+    src: url('../public/fonts/NimbusRomNo9L-Reg.woff2') format('woff2'),
+        url('../public/fonts/NimbusRomNo9L-Reg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nimbus Roman No9 L';
+    src: url('../public/fonts/NimbusRomNo9L-RegIta.woff2') format('woff2'),
+        url('../public/fonts/NimbusRomNo9L-RegIta.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nimbus Roman No9 L';
+    src: url('../public/fonts/NimbusRomNo9L-Med.woff2') format('woff2'),
+        url('../public/fonts/NimbusRomNo9L-Med.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@import "tailwindcss";
+
+html {
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+}
+
+@theme {
+    --spacing: 1px;
+    --spacing-100: clamp(3.125rem, 2.2366rem + 3.3445vw, 6.25rem);
+    --spacing-gutter: clamp(0.9375rem, 0.3156rem + 2.3411vw, 3.125rem);
+
+    --breakpoint-*: initial;
+    --container-*: initial;
+
+    --breakpoint-xsm: 450px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1400px;
+    --breakpoint-3xl: 1600px;
+    --breakpoint-4xl: 1780px;
+
+    --color-brand-100: #EBF1FA;
+
+    --color-disable-200: #D8D8D8;
+
+    --color-primary: #172A3A;
+    --color-primary-2: #111111;
+    --color-secondary: #6A39FF;
+    --color-body: #274259;
+
+    --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-nimbus: "Nimbus Roman No9 L", "Times New Roman", Times, Georgia, serif;
+
+    --text-20: clamp(1rem, 0.9289rem + 0.2676vw, 1.25rem);
+    --text-20--line-height: 1.5;
+
+    --text-180: clamp(5.625rem, 4.0259rem + 6.0201vw, 11.25rem);
+    --text-180--line-height: 1.1;
+
+    --text-160: clamp(5rem, 3.5786rem + 5.3512vw, 10rem);
+    --text-160--line-height: 1.1;
+
+    --text-100: clamp(3.125rem, 2.2366rem + 3.3445vw, 6.25rem);
+    --text-100--line-height: 1.1;
+
+    --text-72: clamp(2.5rem, 1.9314rem + 2.1405vw, 4.5rem);
+    --text-72--line-height: 1.1;
+
+    --text-40: clamp(1.875rem, 1.6973rem + 0.6689vw, 2.5rem);
+    --text-40--line-height: 1.1;
+
+    --text-32: clamp(1.75rem, 1.6789rem + 0.2676vw, 2rem);
+    --text-32--line-height: 1.4;
+
+    --text-28: clamp(1.5rem, 1.4289rem + 0.2676vw, 1.75rem);
+    --text-28--line-height: 1.5;
+
+    --text-24: clamp(1.375rem, 1.3395rem + 0.1338vw, 1.5rem);
+    --text-24--line-height: 1.5;
+
+    --shadow-1: 100px 290px 0 0 #E0DCFF, 275px 117px 0 0 #EEECFF, 53px 38px 0 0 #EEECFF;
+
+    --gradient-1: linear-gradient(180deg, rgba(106, 57, 255, 1) 0%, rgba(239, 177, 0, 1) 100%);
+    --gradient-2: linear-gradient(-11deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+
+    --mask-1: linear-gradient(90deg,rgba(0, 0, 0, 1) calc(100% - 30px), rgba(0, 0, 0, 0) 100%); 
+}
+
+@layer components {
+    * {
+        @apply scrollbar-thin;
+        scrollbar-color: var(--color-surface) var(--color-zinc-200);
+    }
+
+    .container {
+        @apply mx-auto px-gutter
+    }
+
+    .gradient-2{
+        background: var(--gradient-2);
+    }
+
+    .transition_ctm{
+        transition: all .3s ease; 
+    }
+
+    .work_swiper .swiper-slide > div{ 
+        @apply scale-90;
+    }
+
+    .work_swiper .swiper-slide-active > div{ 
+        @apply scale-100;
+    }
+}
+
+@layer base {
+    body {
+        @apply font-inter text-body text-20
+    }
+
+    button {
+        @apply cursor-pointer;
+        text-align: inherit;
+    }
+
+    .main_navigation .active {
+        @apply text-secondary
+    }
+}
