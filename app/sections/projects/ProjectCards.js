@@ -12,7 +12,7 @@ const ProjectCards = () => {
                     projects.map((item) => {
                         return (
                             <div key={item.id}
-                                className="grid md:grid-cols-2 border border-disable-200 rounded-xl xl:rounded-3xl overflow-hidden xl:gap-40 bg-white">
+                                className="grid md:grid-cols-2 border border-disable-200 rounded-xl xl:rounded-3xl overflow-hidden xl:gap-40 bg-white sticky top-30">
                                 <div className='p-24 xl:p-36'>
                                     <div className="flex flex-col gap-10 xl:gap-40 divide-y divide-disable-200 mb-0 xl:mb-100">
                                         <div className='flex flex-col gap-8 xl:gap-16 pb-14 xl:pb-28'>

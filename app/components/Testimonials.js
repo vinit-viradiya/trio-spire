@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 
-const Testimonials = () => {
+const Testimonials = ({props}) => {
 
     const prevRef = useRef(null);
     const nextRef = useRef(null);
@@ -27,7 +27,7 @@ const Testimonials = () => {
     ]
 
     return (
-        <section className="py-100 bg-brand-100">
+        <section className={`${props?.bgClass} py-100`}>
             <div className="container">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-40 xl:gap-80">
                     <div className='lg:col-span-4 xl:col-span-5 2xl:col-span-6'>

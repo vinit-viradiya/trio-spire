@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/lib/projects";
 import Image from "next/image";
+import Testimonials from "@/app/components/Testimonials";
 
 export default async function BlogDetails({ params }) {
   const { slug } = await params;
@@ -207,21 +208,22 @@ export default async function BlogDetails({ params }) {
           </div>
         </div>
       </section>
-      <section>
+      <section className="py-100">
         <div className="container">
           <div className="grid grid-cols-2">
             <div className="aspect-[1.05/1] bg-red-700 relative">
-            <Image src="/images/project-details3.webp" width={840} height={800} alt="Project image 3" />
+              <Image src="/images/project-details3.webp" width={840} height={800} alt="Project image 3" className="absolute inset-0 size-full object-cover" />
             </div>
             <div className="aspect-[1.05/1] bg-yellow-700 relative">
-            <Image src="/images/project-details4.webp" width={840} height={800} alt="Project image 4" />
+              <Image src="/images/project-details4.webp" width={840} height={800} alt="Project image 4" className="absolute inset-0 size-full object-cover" />
             </div>
             <div className="aspect-[2.1/1] bg-green-700 col-span-2 relative">
-            <Image src="/images/project-details5.webp" width={1680} height={800} alt="Project image 5" />
+              <Image src="/images/project-details5.webp" width={1680} height={800} alt="Project image 5" className="absolute inset-0 size-full object-cover" />
             </div>
           </div>
         </div>
       </section>
+      <Testimonials props={{ bgClass: "bg-brand-100" }} />
     </>
   );
 }
