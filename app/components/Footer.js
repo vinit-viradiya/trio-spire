@@ -35,7 +35,7 @@ const Footer = () => {
               business@trio-spire.com
             </Link>
           </div>
-          <div className='flex sm:flex-col md:flex-row md:items-end lg:flex-col justify-between'>
+          <div className='flex flex-row-reverse sm:flex-col md:flex-row md:items-end lg:flex-col justify-between'>
             <a href='#' className="flex items-center gap-12 xl:gap-24 font-medium">
               <span>Back to Top</span>
               <div className="bg-primary p-8 xl:p-13 rounded-full">

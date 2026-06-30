@@ -151,7 +151,6 @@ html {
         --lb-is: calc(var(--lb-fs) + 4px);
         font-size: var(--lb-fs);
         line-height: var(--lb-lh);
-        @apply flex flex-col gap-36 ;
     }
 
     .list_badge li{

@@ -152,11 +152,11 @@ export default async function BlogDetails({ params }) {
       </section>
       <section className="py-100">
         <div className="container">
-          <div className="grid grid-cols-2 gap-80">
+          <div className="grid lg:grid-cols-2 gap-y-20 gap-x-80">
             <h2 className="text-32 font-medium text-primary-2">
               Key Features
             </h2>
-            <ul className="list_badge">
+            <ul className="list_badge flex flex-col gap-8 lg:gap-36">
               <li>Ingredient transparency section</li>
               <li>Subscription-based purchase option</li>
               <li>Smart product filtering</li>
