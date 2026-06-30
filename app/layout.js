@@ -1,3 +1,5 @@
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 import LenisProvider from "./components/LenisProvider";
 import "./globals.css";
 
@@ -10,7 +12,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <LenisProvider>
-        <body>{children}</body>
+        <body>
+          <Header />
+          {children}
+          <Footer />
+        </body>
       </LenisProvider>
     </html>
   );

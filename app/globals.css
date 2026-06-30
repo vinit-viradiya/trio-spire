@@ -67,7 +67,8 @@ html {
     --breakpoint-3xl: 1600px;
     --breakpoint-4xl: 1780px;
 
-    --color-brand-100: #EBF1FA;
+    --color-brand-100: #EBF1FA; 
+    --color-brand-400: #5B90BE;
 
     --color-disable-200: #D8D8D8;
 
@@ -75,12 +76,14 @@ html {
     --color-primary-2: #111111;
     --color-secondary: #6A39FF;
     --color-body: #274259;
+    --color-text-body: #4B4B4B;
 
     --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --font-nimbus: "Nimbus Roman No9 L", "Times New Roman", Times, Georgia, serif;
 
     --text-20: clamp(1rem, 0.9289rem + 0.2676vw, 1.25rem);
     --text-20--line-height: 1.5;
+    --text-20--letter-spacing: 0.04em;
 
     --text-180: clamp(5.625rem, 4.0259rem + 6.0201vw, 11.25rem);
     --text-180--line-height: 1.1;
@@ -107,6 +110,8 @@ html {
     --text-24--line-height: 1.5;
 
     --shadow-1: 100px 290px 0 0 #E0DCFF, 275px 117px 0 0 #EEECFF, 53px 38px 0 0 #EEECFF;
+
+    --drop-shadow-2: 0 10px 15px rgba(0,0,0,.1);
 
     --gradient-1: linear-gradient(180deg, rgba(106, 57, 255, 1) 0%, rgba(239, 177, 0, 1) 100%);
     --gradient-2: linear-gradient(-11deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -138,6 +143,23 @@ html {
 
     .work_swiper .swiper-slide-active > div{ 
         @apply scale-100;
+    }
+
+    .list_badge{
+        --lb-fs: 20px;
+        --lb-lh: calc(var(--lb-fs) + 8px);
+        --lb-is: calc(var(--lb-fs) + 4px);
+        font-size: var(--lb-fs);
+        line-height: var(--lb-lh);
+        @apply flex flex-col gap-36 ;
+    }
+
+    .list_badge li{
+        @apply flex gap-12;
+    } 
+
+    .list_badge li::before{
+        @apply content-[''] block size-[calc(var(--lb-fs)+4px)] mt-[calc((var(--lb-lh)-var(--lb-is))/2)] bg-[url(../public/icons/badge.svg)] shrink-0 bg-cover;
     }
 }
 

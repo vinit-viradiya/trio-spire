@@ -1,18 +1,29 @@
-import React from 'react'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Home from './pages/Home'
+import CTA from "./components/CTA"
+import FAQ from "./components/FAQ"
+import Testimonials from "./components/Testimonials"
+import About from "./sections/home/About"
+import Facts from "./sections/home/Facts"
+import Hero from "./sections/home/Hero"
+import Industries from "./sections/home/Industries"
+import Services from "./sections/home/Services"
+import Work from "./sections/home/Work"
 
-const page = () => {
+const Home = () => {
   return (
-    <>
-      <Header />
-      <main>
-        <Home />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <Hero />
+      <div id="about">
+        <About />
+      </div>
+      <Facts />
+      <Services />
+      <Work />
+      <Industries />
+      <Testimonials />
+      <FAQ />
+      <CTA />
+    </main>
   )
 }
 
-export default page
+export default Home

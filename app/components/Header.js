@@ -6,11 +6,12 @@ import Logo from '@/public/images/logo.svg'
 import Image from 'next/image'
 import Button from './Button'
 import { usePathname } from 'next/navigation'
+import Clock from './Clock'
 
 
 const Header = () => {
 
-    const links = [{ href: '/', text: 'Home' }, { href: '/', text: 'Services' }, { href: '/', text: 'Projects' }]
+    const links = [{ href: '/', text: 'Home' }, { href: '/services', text: 'Services' }, { href: '/projects', text: 'Projects' }]
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
@@ -59,7 +60,7 @@ const Header = () => {
                                 ${isOpen ? "translate-x-0" : "translate-x-full"}`}
                         >
                             <div className="flex items-center justify-between">
-                                Surat, Gujarat 12:30 PM
+                                <span>Surat, Gujarat <Clock /> </span>
                                 <button onClick={() => setIsOpen(false)} aria-label='Close primary menu'>
                                     <svg width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M19.7732 12.2267L12.2266 19.7734" stroke="#323232" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
